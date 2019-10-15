@@ -41,6 +41,7 @@ def ABFT(A, B):
 			total += n[m]
 		if (total != 2 * n[m]):
 			print("column checksum error")
+			print("error in column %i" %(m + 1))
 		total = 0
 
 	#Check rows
@@ -50,9 +51,9 @@ def ABFT(A, B):
 			total += testmatrix[r][s]
 		if (total != testmatrix[r][s + 1]):
 			print("row checksum error")
+			print("error in row %i" %(r + 1))
 		total = 0
 
-	print("no errors")
 	print(testmatrix)
 	return testmatrix
 
