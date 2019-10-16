@@ -4,6 +4,7 @@ import sys
 
 def main():
    codeword = int(sys.argv[1])
+   print("Even Parity:")
    if (sys.argv[2] == "encode"):
       new = parityEncode(codeword)
       print("input  {0:015b}".format(codeword) + " ")
@@ -38,7 +39,6 @@ def countOnes(codeword):
          cnt+=1
       codeword = codeword >> 1    
    return cnt
-
 
 if __name__== "__main__":
   main()
